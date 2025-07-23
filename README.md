@@ -1,69 +1,101 @@
-# Welcome to your Lovable project
+# AI Travel Planner
 
-## Project info
+A modern, AI-powered travel itinerary generator built with React, TypeScript, Vite, shadcn-ui, and Tailwind CSS. This application leverages Google Gemini and SerpAPI to create personalized travel plans, including daily itineraries, cost estimates, accommodation suggestions, and real-time flight options.
 
-**URL**: https://lovable.dev/projects/40cee917-e05a-4a2b-afde-113ff710ac5b
+---
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **AI-Generated Travel Itineraries**: Get detailed, day-by-day plans tailored to your preferences.
+- **Flight Search Integration**: View real-time flight options and booking links.
+- **Customizable Preferences**: Input source, destination, dates, budget, interests, and more.
+- **Modern UI/UX**: Responsive, accessible, and visually appealing interface.
+- **Chat Assistant**: Ask follow-up questions about your itinerary.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/40cee917-e05a-4a2b-afde-113ff710ac5b) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
 
-**Use your preferred IDE**
+### Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository:**
+   ```sh
+   git clone <YOUR_GIT_URL>
+   cd travelogic-gemini-main
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   # or
+   bun install
+   ```
+3. **Set up environment variables:**
+   - Create a `.env` file in the project root:
+     ```env
+     VITE_GEMINI_API_KEY=your_google_generative_ai_key
+     VITE_SERPAPI_API_KEY=your_serpapi_key
+     ```
+   - Replace with your actual API keys.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+4. **Start the development server:**
+   ```sh
+   npm run dev
+   # or
+   bun run dev
+   ```
+   The app will be available at `http://localhost:8080` (or as shown in your terminal).
 
-Follow these steps:
+---
 
+## Project Structure
+
+- `src/` — Main source code
+  - `components/` — React components
+  - `lib/` — API and utility logic
+  - `pages/` — Page components
+  - `hooks/` — Custom React hooks
+- `public/` — Static assets
+- `.env` — Environment variables (not committed)
+
+---
+
+## Deployment
+
+You can deploy this app to any static hosting provider (e.g., Netlify, Vercel) or your own server. Build the app with:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm run build
 ```
+The output will be in the `dist/` folder.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Technologies Used
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Google Generative AI (Gemini)](https://ai.google.dev/)
+- [SerpAPI](https://serpapi.com/)
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## License
 
-## What technologies are used for this project?
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This project is built with .
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Contributing
 
-## How can I deploy this project?
+Contributions are welcome! Please open issues or pull requests for improvements or bug fixes.
 
-Simply open [Lovable](https://lovable.dev/projects/40cee917-e05a-4a2b-afde-113ff710ac5b) and click on Share -> Publish.
+---
 
-## I want to use a custom domain - is that possible?
+## Contact
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+For questions or support, please open an issue in this repository.
