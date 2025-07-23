@@ -169,6 +169,25 @@ async function fetchFlights(source: string, destination: string, date: string) {
         booking_token:
           "WyJDalJJVjFORk5VWlpPSEZwTWsxQlFrcDZhSGRDUnkwdExTMHRMUzB0TFhaMGJuY3lNRUZCUVVGQlIyVnJXWFJOVFdKdmNEUkJFZ3cyUlRVeU9YdzJSVEUyTXpFYUN3alB4QUlRQWhvRFZWTkVPQnh3ejhRQyIsW1siREVMIiwiMjAyNS0wMi0wNyIsIkNDVSIsbnVsbCwiNkUiLCI1MjkiXSxbIkNDVSIsIjIwMjUtMDItMDciLCJIQU4iLG51bGwsIjZFIiwiMTYzMSJdXV0=",
       },
+      // Additional mock flights
+      {
+        price: 350,
+        total_duration: 320,
+        flights: [{ airline: "Air India", flight_number: "AI 101" }],
+        booking_token: "mocktoken3",
+      },
+      {
+        price: 275,
+        total_duration: 210,
+        flights: [{ airline: "SpiceJet", flight_number: "SG 456" }],
+        booking_token: "mocktoken4",
+      },
+      {
+        price: 390,
+        total_duration: 360,
+        flights: [{ airline: "Go First", flight_number: "G8 789" }],
+        booking_token: "mocktoken5",
+      },
     ];
   }
 }
@@ -310,8 +329,26 @@ export async function generateTravelPlan(preferences: TravelPreferences) {
             booking_token:
               "WyJDalJJVjFORk5VWlpPSEZwTWsxQlFrcDZhSGRDUnkwdExTMHRMUzB0TFhaMGJuY3lNRUZCUVVGQlIyVnJXWFJOVFdKdmNEUkJFZ3cyUlRVeU9YdzJSVEUyTXpFYUN3alB4QUlRQWhvRFZWTkVPQnh3ejhRQyIsW1siREVMIiwiMjAyNS0wMi0wNyIsIkNDVSIsbnVsbCwiNkUiLCI1MjkiXSxbIkNDVSIsIjIwMjUtMDItMDciLCJIQU4iLG51bGwsIjZFIiwiMTYzMSJdXV0=",
           },
+          // Additional mock flights
+          {
+            price: 350,
+            total_duration: 320,
+            flights: [{ airline: "Air India", flight_number: "AI 101" }],
+            booking_token: "mocktoken3",
+          },
+          {
+            price: 275,
+            total_duration: 210,
+            flights: [{ airline: "SpiceJet", flight_number: "SG 456" }],
+            booking_token: "mocktoken4",
+          },
+          {
+            price: 390,
+            total_duration: 360,
+            flights: [{ airline: "Go First", flight_number: "G8 789" }],
+            booking_token: "mocktoken5",
+          },
         ];
-
         mockFlights.forEach((flight, index) => {
           plan += `### Option ${index + 1}\n`;
           plan += `- Price: $${flight.price}\n`;

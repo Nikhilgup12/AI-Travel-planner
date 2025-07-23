@@ -29,8 +29,8 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <form onSubmit={handleSubmit} className="space-y-8 animate-fade-in">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-2">
           <Label htmlFor="source">Source Location</Label>
           <Input
@@ -41,6 +41,7 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
               setPreferences({ ...preferences, source: e.target.value })
             }
             placeholder="e.g., New York"
+            className="rounded-lg border-gray-300 focus:border-travel-primary focus:ring-2 focus:ring-travel-primary/30 transition"
           />
         </div>
         <div className="space-y-2">
@@ -53,6 +54,7 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
               setPreferences({ ...preferences, destination: e.target.value })
             }
             placeholder="e.g., Paris"
+            className="rounded-lg border-gray-300 focus:border-travel-primary focus:ring-2 focus:ring-travel-primary/30 transition"
           />
         </div>
         <div className="space-y-2">
@@ -65,6 +67,7 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
             onChange={(e) =>
               setPreferences({ ...preferences, startDate: e.target.value })
             }
+            className="rounded-lg border-gray-300 focus:border-travel-primary focus:ring-2 focus:ring-travel-primary/30 transition"
           />
         </div>
         <div className="space-y-2">
@@ -77,6 +80,7 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
             onChange={(e) =>
               setPreferences({ ...preferences, endDate: e.target.value })
             }
+            className="rounded-lg border-gray-300 focus:border-travel-primary focus:ring-2 focus:ring-travel-primary/30 transition"
           />
         </div>
         <div className="space-y-2">
@@ -89,6 +93,7 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
               setPreferences({ ...preferences, budget: e.target.value })
             }
             placeholder="e.g., $5000"
+            className="rounded-lg border-gray-300 focus:border-travel-primary focus:ring-2 focus:ring-travel-primary/30 transition"
           />
         </div>
         <div className="space-y-2">
@@ -105,6 +110,7 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
                 travelers: parseInt(e.target.value),
               })
             }
+            className="rounded-lg border-gray-300 focus:border-travel-primary focus:ring-2 focus:ring-travel-primary/30 transition"
           />
         </div>
       </div>
@@ -118,7 +124,7 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
             setPreferences({ ...preferences, interests: e.target.value })
           }
           placeholder="e.g., historical sites, local cuisine, outdoor activities"
-          className="h-24"
+          className="h-24 rounded-lg border-gray-300 focus:border-travel-primary focus:ring-2 focus:ring-travel-primary/30 transition"
         />
       </div>
       <div className="flex items-center space-x-2">
@@ -139,7 +145,11 @@ export function TravelForm({ onSubmit, isLoading }: TravelFormProps) {
           Include transportation details
         </Label>
       </div>
-      <Button type="submit" className="w-full" disabled={isLoading}>
+      <Button
+        type="submit"
+        className="w-full py-3 text-lg rounded-lg bg-travel-primary hover:bg-travel-primary/90 transition-all shadow-md"
+        disabled={isLoading}
+      >
         {isLoading ? "Generating Plan..." : "Plan My Trip"}
       </Button>
     </form>
